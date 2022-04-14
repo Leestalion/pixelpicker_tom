@@ -8,8 +8,8 @@ from werkzeug.middleware.dispatcher import DispatcherMiddleware
 from pixelapi import create_app
 
 frontend = SharedDataMiddleware(NotFound(), {
-    '/assets/': '../frontend/dist/assets',
-    '/': '../frontend/dist/index.html'
+    '/assets/': './frontend/dist/assets',
+    '/': './frontend/dist/index.html'
 })
 
 app = DispatcherMiddleware(frontend, {'/api': create_app()})
