@@ -1,0 +1,59 @@
+{
+    // Utilisez IntelliSense pour en savoir plus sur les attributs possibles.
+    // Pointez pour afficher la description des attributs existants.
+    // Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Frontend",
+            "request": "launch",
+            "runtimeArgs": [
+                "run",
+                "dev"
+            ],
+            "runtimeExecutable": "npm",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "pwa-node"
+        },
+        {
+            "name": "Backend",
+            "type": "python",
+            "request": "launch",
+            "program": "wsgi.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+
+        {
+            "name": "Build frontend",
+            "request": "launch",
+            "runtimeArgs": [
+                "run",
+                "build-dev"
+            ],
+            "runtimeExecutable": "npm",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "pwa-node"
+        },
+
+        {
+            "name": "Launch Built App",
+            "type": "python",
+            "request": "launch",
+            "program": "dispatcher.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ],
+
+    "compounds": [
+        {
+            "name": "LaunchApp",
+            "configurations": ["Frontend", "Backend"]
+        }
+    ]
+}

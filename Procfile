@@ -1,0 +1,1 @@
+web: export FLASK_APP=pixelapi && gunicorn dispatcher:app --log-file -

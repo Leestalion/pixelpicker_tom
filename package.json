@@ -1,0 +1,9 @@
+{
+  "name": "flask-vue-example",
+  "engines": {"yarn": ">=1.19"},
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "build-dev": "cd frontend && npm run build",
+    "postinstall": "cd frontend && yarn install && yarn build"
+  }
+}
